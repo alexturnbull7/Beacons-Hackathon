@@ -1,0 +1,14 @@
+# Uncomment this line to define a global platform for your project
+# platform :ios, '6.0'
+
+target 'ProjectElephant' do
+pod 'GUITabPagerViewController', '~> 0.0.5'
+pod "PulsingHalo"
+pod "AFNetworking", "~> 2.0"
+pod 'SVProgressHUD', :head
+end
+
+target 'ProjectElephantTests' do
+
+end
+

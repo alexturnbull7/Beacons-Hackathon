@@ -1,0 +1,18 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+
+# Home page
+GET        /                                              controllers.Application.index()
+
+#USER SERVICE
+GET        /api/v1/isValidUser/:username/:password        api.UserService.isValidUser(username, password)
+
+#PATIENT SERVICE
+GET         /api/v1/patient/:beaconId                     api.PatientService.getPatientByBeaconId(beaconId: Int)
+GET			/api/v1/patient/getPatientByName/:name        api.PatientService.getPatientByName(name)
+GET			/api/v1/patient/getPatientById/:id		   	  api.PatientService.getPatientById(id : Int)
+PUT			/api/v1/patient/addNote/:id					  api.PatientService.addNote(id:Int)	
+
+# Map static resources from the /public folder to the /assets URL path
+GET        /assets/*file                                  controllers.Assets.at(path="/public", file)
